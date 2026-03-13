@@ -1,0 +1,31 @@
+﻿Symbols loaded at 0x10000000 (fake base)
+
+Minidump: 15 streams
+
+flutter_webrtc_plugin.dll: base=0x00007ffa36900000, size=0x1327000
+Crashing thread ID: 0x1600
+Thread 0x1600: stack VA=0x000000efe0771b80 size=0xe480 rawOffset=0x2096dc8
+
+Scanning 7312 stack slots for addrs in [0x7ffa36900000, 0x7ffa37c20600)...
+
+Found 42 potential return addresses.
+
+         StackAddr         RVA  Function (source:line)
+----------------------------------------------------------------------------------------------------
+0x000000efe0771b88  +0x01dc66  std::_Variant_raw_visit<std::_Variant_storage_<0,std::monostate,bool,int,__int64
+python : Traceback (most recent call last):
+At line:3 char:9
++ " 2>&1; python -W ignore full_stack_resolve.py 2>&1 | Out-File -Encod ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last) 
+   ::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\rapid_cord\full_stack_resolve.py", line 209, in <module>
+    print(f"{'':>48}\u2192 {src_short}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in 
+position 48: character maps to <undefined>
